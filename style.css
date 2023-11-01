@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+main{
+    background-color: hsl(233, 47%, 7%);
+    width:  1440px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    overflow-y: hidden;
+}
+.inner-main{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.main-right{
+    border:1px solid red;
+    position: relative;
+}
+.mobile{
+    display: none;
+}
+.main-right::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277, 64%, 61%);
+    opacity: 65%;
+}
+/* left style */
+.main-left{
+    border:1px solid red;
+    padding: 70px 70px 40px 70px ;
+}
+.main-left h1{
+    font-size: 23px;
+ color:  hsl(0, 0%, 100%);
+ font-family: inter;
+ border: 1px solid white;
+ font-weight: 700;
+ margin-bottom: 30px;
+ width: 230px;
+ text-align: center;
+ margin: 0 auto;
+}
+.main-left h1 span{
+    color: hsl(277, 64%, 61%);
+}
+.discovery{
+    width: 390px;
+    text-align: center;
+    margin: 25px auto;
+    font-size: 15px;
+    font-family: inter;
+    border: 1px solid green;
+    color: hsla(0, 0%, 100%, 0.75)
+}
+.list{
+    display: flex;
+    /* border: 1px solid magenta; */
+    list-style-type: none;
+    margin-top: 70px;
+    width: 350px;
+    justify-content: space-around;
+    font-family: lexand deca;
+    color:  hsla(0, 0%, 100%, 0.6);
+   }
+.stats{
+    color: hsl(0, 0%, 100%);
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.cats{
+    color:  hsla(0, 0%, 100%, 0.6);
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 375px) {
+    main{
+        width:  100%;
+        height: auto;
+        flex-direction: column;
+        padding: 50px 20px;
+        overflow: hidden;
+    }
+    .inner-main{
+        flex-direction: column;
+    }
+    .main-right img.desktop{
+        display: block;
+    }
+    .main-right img.mobile{
+        display: none;
+        max-width: 370px;
+    }
+    .main-left{
+        padding: 50px 20px;
+    }
+    .main-left h1{
+        font-size: 23px;
+        margin-bottom: 30px;
+        width: 230px;
+        margin: 0 auto;n  
+        text-align: center;
+    }
+    .discovery{
+        width: 295px;
+        margin: 25px auto;
+        text-align: center;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: space-between;
+        padding: 0;
+        text-align: center;
+        gap: 20px;
+    }
+}
